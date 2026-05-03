@@ -1,0 +1,13 @@
+{
+  "material_slots": {
+    "Cube": [
+      "Material"
+    ]
+  },
+  "modifier_links": {
+    "Cube": {
+      "GeometryNodes": "Geometry Nodes"
+    }
+  },
+  "version": 1
+}
