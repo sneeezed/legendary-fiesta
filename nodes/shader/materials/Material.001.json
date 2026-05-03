@@ -5,67 +5,6 @@
   "interface": [],
   "nodes": [
     {
-      "name": "Material Output",
-      "label": "",
-      "bl_idname": "ShaderNodeOutputMaterial",
-      "location": [
-        300.0,
-        300.0
-      ],
-      "width": 140.0,
-      "hide": false,
-      "mute": false,
-      "use_custom_color": false,
-      "color": [
-        0.6079999804496765,
-        0.6079999804496765,
-        0.6079999804496765
-      ],
-      "parent": null,
-      "type_specific": {
-        "target": "ALL"
-      },
-      "inputs": [
-        {
-          "identifier": "Surface",
-          "name": "Surface",
-          "socket_type": "NodeSocketShader",
-          "default_value": null,
-          "hide": false,
-          "hide_value": false
-        },
-        {
-          "identifier": "Volume",
-          "name": "Volume",
-          "socket_type": "NodeSocketShader",
-          "default_value": null,
-          "hide": false,
-          "hide_value": false
-        },
-        {
-          "identifier": "Displacement",
-          "name": "Displacement",
-          "socket_type": "NodeSocketVector",
-          "default_value": [
-            0.0,
-            0.0,
-            0.0
-          ],
-          "hide": false,
-          "hide_value": true
-        },
-        {
-          "identifier": "Thickness",
-          "name": "Thickness",
-          "socket_type": "NodeSocketFloat",
-          "default_value": 0.0,
-          "hide": false,
-          "hide_value": true
-        }
-      ],
-      "outputs": []
-    },
-    {
       "name": "Principled BSDF",
       "label": "",
       "bl_idname": "ShaderNodeBsdfPrincipled",
@@ -93,9 +32,9 @@
           "name": "Base Color",
           "socket_type": "NodeSocketColor",
           "default_value": [
-            0.8001565933227539,
+            0.8001489639282227,
+            0.6878448724746704,
             0.0,
-            0.07906235754489899,
             1.0
           ],
           "hide": false,
@@ -121,7 +60,7 @@
           "identifier": "IOR",
           "name": "IOR",
           "socket_type": "NodeSocketFloat",
-          "default_value": 1.4500000476837158,
+          "default_value": 1.5,
           "hide": false,
           "hide_value": false
         },
@@ -388,6 +327,67 @@
           "hide_value": false
         }
       ]
+    },
+    {
+      "name": "Material Output",
+      "label": "",
+      "bl_idname": "ShaderNodeOutputMaterial",
+      "location": [
+        300.0,
+        300.0
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {
+        "target": "ALL"
+      },
+      "inputs": [
+        {
+          "identifier": "Surface",
+          "name": "Surface",
+          "socket_type": "NodeSocketShader",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Volume",
+          "name": "Volume",
+          "socket_type": "NodeSocketShader",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Displacement",
+          "name": "Displacement",
+          "socket_type": "NodeSocketVector",
+          "default_value": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "hide": false,
+          "hide_value": true
+        },
+        {
+          "identifier": "Thickness",
+          "name": "Thickness",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": true
+        }
+      ],
+      "outputs": []
     }
   ],
   "links": [
@@ -401,5 +401,5 @@
     }
   ],
   "owner_type": "materials",
-  "owner_name": "Material"
+  "owner_name": "Material.001"
 }

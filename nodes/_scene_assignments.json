@@ -2,6 +2,9 @@
   "material_slots": {
     "Cube": [
       "Material"
+    ],
+    "Sphere": [
+      "Material.001"
     ]
   },
   "modifier_links": {
