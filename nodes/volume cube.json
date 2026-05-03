@@ -1,0 +1,211 @@
+{
+  "schema_version": "1.0",
+  "name": "volume cube",
+  "type": "GeometryNodeTree",
+  "interface": [
+    {
+      "name": "Geometry",
+      "socket_type": "NodeSocketGeometry",
+      "in_out": "OUTPUT",
+      "default_value": null,
+      "min_value": null,
+      "max_value": null,
+      "attribute_domain": "POINT"
+    },
+    {
+      "name": "Geometry",
+      "socket_type": "NodeSocketGeometry",
+      "in_out": "INPUT",
+      "default_value": null,
+      "min_value": null,
+      "max_value": null,
+      "attribute_domain": "POINT"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Group Input",
+      "label": "",
+      "bl_idname": "NodeGroupInput",
+      "location": [
+        -340.0,
+        0.0
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [],
+      "outputs": [
+        {
+          "identifier": "Socket_0",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    },
+    {
+      "name": "Group Output",
+      "label": "",
+      "bl_idname": "NodeGroupOutput",
+      "location": [
+        263.87640380859375,
+        13.823282241821289
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Socket_1",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "Volume Cube",
+      "label": "",
+      "bl_idname": "GeometryNodeVolumeCube",
+      "location": [
+        -42.24447250366211,
+        190.48599243164062
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Density",
+          "name": "Density",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 1.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Background",
+          "name": "Background",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Min",
+          "name": "Min",
+          "socket_type": "NodeSocketVector",
+          "default_value": [
+            -1.0,
+            -1.0,
+            -1.0
+          ],
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Max",
+          "name": "Max",
+          "socket_type": "NodeSocketVector",
+          "default_value": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Resolution X",
+          "name": "Resolution X",
+          "socket_type": "NodeSocketInt",
+          "default_value": 32,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Resolution Y",
+          "name": "Resolution Y",
+          "socket_type": "NodeSocketInt",
+          "default_value": 32,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Resolution Z",
+          "name": "Resolution Z",
+          "socket_type": "NodeSocketInt",
+          "default_value": 32,
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": [
+        {
+          "identifier": "Volume",
+          "name": "Volume",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from_node": "Volume Cube",
+      "from_socket_identifier": "Volume",
+      "from_socket_name": "Volume",
+      "to_node": "Group Output",
+      "to_socket_identifier": "Socket_1",
+      "to_socket_name": "Geometry"
+    }
+  ]
+}

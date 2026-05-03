@@ -11,6 +11,9 @@
     "Cube": {
       "GeometryNodes": "Geometry Nodes"
     },
+    "Icosphere": {
+      "GeometryNodes": "volume cube"
+    },
     "Sphere": {
       "GeometryNodes": "ball"
     }
