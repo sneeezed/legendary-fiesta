@@ -45,7 +45,7 @@
       "inputs": [],
       "outputs": [
         {
-          "identifier": "Socket_0",
+          "identifier": "Socket_1",
           "name": "Geometry",
           "socket_type": "NodeSocketGeometry",
           "default_value": null,
@@ -83,7 +83,7 @@
       "type_specific": {},
       "inputs": [
         {
-          "identifier": "Socket_1",
+          "identifier": "Socket_0",
           "name": "Geometry",
           "socket_type": "NodeSocketGeometry",
           "default_value": null,
@@ -260,7 +260,7 @@
       "from_socket_identifier": "Geometry",
       "from_socket_name": "Geometry",
       "to_node": "Group Output",
-      "to_socket_identifier": "Socket_1",
+      "to_socket_identifier": "Socket_0",
       "to_socket_name": "Geometry"
     },
     {
@@ -273,7 +273,7 @@
     },
     {
       "from_node": "Group Input",
-      "from_socket_identifier": "Socket_0",
+      "from_socket_identifier": "Socket_1",
       "from_socket_name": "Geometry",
       "to_node": "Instance on Points",
       "to_socket_identifier": "Points",

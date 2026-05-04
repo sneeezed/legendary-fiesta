@@ -2,26 +2,11 @@
   "material_slots": {
     "Cube": [
       "Material"
-    ],
-    "Sphere": [
-      "Material.001"
     ]
   },
   "modifier_links": {
     "Cube": {
-      "GeometryNodes": "Geometry Nodes"
-    },
-    "Cube.001": {
-      "GeometryNodes": "subdiv"
-    },
-    "Cylinder": {
-      "GeometryNodes": "cylinder sm"
-    },
-    "Icosphere": {
-      "GeometryNodes": "volume cube"
-    },
-    "Sphere": {
-      "GeometryNodes": "ball"
+      "GeometryNodes": "michealnodes"
     }
   },
   "version": 1

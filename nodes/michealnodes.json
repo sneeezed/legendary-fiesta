@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "name": "volume cube",
+  "name": "michealnodes",
   "type": "GeometryNodeTree",
   "interface": [
     {
@@ -45,7 +45,7 @@
       "inputs": [],
       "outputs": [
         {
-          "identifier": "Socket_1",
+          "identifier": "Socket_0",
           "name": "Geometry",
           "socket_type": "NodeSocketGeometry",
           "default_value": null,
@@ -67,8 +67,8 @@
       "label": "",
       "bl_idname": "NodeGroupOutput",
       "location": [
-        263.87640380859375,
-        13.823282241821289
+        200.0,
+        0.0
       ],
       "width": 140.0,
       "hide": false,
@@ -83,7 +83,7 @@
       "type_specific": {},
       "inputs": [
         {
-          "identifier": "Socket_0",
+          "identifier": "Socket_1",
           "name": "Geometry",
           "socket_type": "NodeSocketGeometry",
           "default_value": null,
@@ -102,12 +102,12 @@
       "outputs": []
     },
     {
-      "name": "Volume Cube",
+      "name": "Mix",
       "label": "",
-      "bl_idname": "GeometryNodeVolumeCube",
+      "bl_idname": "ShaderNodeMix",
       "location": [
-        -42.24447250366211,
-        190.48599243164062
+        -33.062599182128906,
+        74.34587097167969
       ],
       "width": 140.0,
       "hide": false,
@@ -119,191 +119,168 @@
         0.6079999804496765
       ],
       "parent": null,
-      "type_specific": {},
+      "type_specific": {
+        "data_type": "RGBA",
+        "blend_type": "MIX",
+        "clamp_factor": true,
+        "clamp_result": false,
+        "factor_mode": "UNIFORM"
+      },
       "inputs": [
         {
-          "identifier": "Density",
-          "name": "Density",
-          "socket_type": "NodeSocketFloat",
-          "default_value": 1.0,
+          "identifier": "Factor_Float",
+          "name": "Factor",
+          "socket_type": "NodeSocketFloatFactor",
+          "default_value": 0.5,
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "Background",
-          "name": "Background",
+          "identifier": "Factor_Vector",
+          "name": "Factor",
+          "socket_type": "NodeSocketVector",
+          "default_value": [
+            0.5,
+            0.5,
+            0.5
+          ],
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "A_Float",
+          "name": "A",
           "socket_type": "NodeSocketFloat",
           "default_value": 0.0,
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "Min",
-          "name": "Min",
+          "identifier": "B_Float",
+          "name": "B",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "A_Vector",
+          "name": "A",
           "socket_type": "NodeSocketVector",
           "default_value": [
-            -1.0,
-            -1.0,
-            -1.0
+            0.0,
+            0.0,
+            0.0
           ],
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "Max",
-          "name": "Max",
+          "identifier": "B_Vector",
+          "name": "B",
           "socket_type": "NodeSocketVector",
           "default_value": [
-            1.0,
-            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "A_Color",
+          "name": "A",
+          "socket_type": "NodeSocketColor",
+          "default_value": [
+            0.5,
+            0.5,
+            0.5,
             1.0
           ],
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "Resolution X",
-          "name": "Resolution X",
-          "socket_type": "NodeSocketInt",
-          "default_value": 32,
+          "identifier": "B_Color",
+          "name": "B",
+          "socket_type": "NodeSocketColor",
+          "default_value": [
+            0.5,
+            0.5,
+            0.5,
+            1.0
+          ],
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "Resolution Y",
-          "name": "Resolution Y",
-          "socket_type": "NodeSocketInt",
-          "default_value": 32,
+          "identifier": "A_Rotation",
+          "name": "A",
+          "socket_type": "NodeSocketRotation",
+          "default_value": [
+            0.0,
+            0.0,
+            0.0
+          ],
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "Resolution Z",
-          "name": "Resolution Z",
-          "socket_type": "NodeSocketInt",
-          "default_value": 32,
+          "identifier": "B_Rotation",
+          "name": "B",
+          "socket_type": "NodeSocketRotation",
+          "default_value": [
+            0.0,
+            0.0,
+            0.0
+          ],
           "hide": false,
           "hide_value": false
         }
       ],
       "outputs": [
         {
-          "identifier": "Volume",
-          "name": "Volume",
-          "socket_type": "NodeSocketGeometry",
-          "default_value": null,
-          "hide": false,
-          "hide_value": false
-        }
-      ]
-    },
-    {
-      "name": "Repeat Input",
-      "label": "",
-      "bl_idname": "GeometryNodeRepeatInput",
-      "location": [
-        -463.2874755859375,
-        157.6556854248047
-      ],
-      "width": 140.0,
-      "hide": false,
-      "mute": false,
-      "use_custom_color": false,
-      "color": [
-        0.6079999804496765,
-        0.6079999804496765,
-        0.6079999804496765
-      ],
-      "parent": null,
-      "type_specific": {},
-      "inputs": [
-        {
-          "identifier": "Iterations",
-          "name": "Iterations",
-          "socket_type": "NodeSocketInt",
-          "default_value": 1,
+          "identifier": "Result_Float",
+          "name": "Result",
+          "socket_type": "NodeSocketFloat",
+          "default_value": 0.0,
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "__extend__",
-          "name": "",
-          "socket_type": "NodeSocketVirtual",
-          "default_value": null,
-          "hide": false,
-          "hide_value": false
-        }
-      ],
-      "outputs": [
-        {
-          "identifier": "Iteration",
-          "name": "Iteration",
-          "socket_type": "NodeSocketInt",
-          "default_value": 0,
+          "identifier": "Result_Vector",
+          "name": "Result",
+          "socket_type": "NodeSocketVector",
+          "default_value": [
+            0.0,
+            0.0,
+            0.0
+          ],
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "__extend__",
-          "name": "",
-          "socket_type": "NodeSocketVirtual",
-          "default_value": null,
-          "hide": false,
-          "hide_value": false
-        }
-      ]
-    },
-    {
-      "name": "Repeat Output",
-      "label": "",
-      "bl_idname": "GeometryNodeRepeatOutput",
-      "location": [
-        -163.2874755859375,
-        157.6556854248047
-      ],
-      "width": 140.0,
-      "hide": false,
-      "mute": false,
-      "use_custom_color": false,
-      "color": [
-        0.6079999804496765,
-        0.6079999804496765,
-        0.6079999804496765
-      ],
-      "parent": null,
-      "type_specific": {},
-      "inputs": [
-        {
-          "identifier": "Item_0",
-          "name": "Geometry",
-          "socket_type": "NodeSocketGeometry",
-          "default_value": null,
+          "identifier": "Result_Color",
+          "name": "Result",
+          "socket_type": "NodeSocketColor",
+          "default_value": [
+            0.800000011920929,
+            0.800000011920929,
+            0.800000011920929,
+            1.0
+          ],
           "hide": false,
           "hide_value": false
         },
         {
-          "identifier": "__extend__",
-          "name": "",
-          "socket_type": "NodeSocketVirtual",
-          "default_value": null,
-          "hide": false,
-          "hide_value": false
-        }
-      ],
-      "outputs": [
-        {
-          "identifier": "Item_0",
-          "name": "Geometry",
-          "socket_type": "NodeSocketGeometry",
-          "default_value": null,
-          "hide": false,
-          "hide_value": false
-        },
-        {
-          "identifier": "__extend__",
-          "name": "",
-          "socket_type": "NodeSocketVirtual",
-          "default_value": null,
+          "identifier": "Result_Rotation",
+          "name": "Result",
+          "socket_type": "NodeSocketRotation",
+          "default_value": [
+            0.0,
+            0.0,
+            0.0
+          ],
           "hide": false,
           "hide_value": false
         }
@@ -312,11 +289,11 @@
   ],
   "links": [
     {
-      "from_node": "Volume Cube",
-      "from_socket_identifier": "Volume",
-      "from_socket_name": "Volume",
+      "from_node": "Group Input",
+      "from_socket_identifier": "Socket_0",
+      "from_socket_name": "Geometry",
       "to_node": "Group Output",
-      "to_socket_identifier": "Socket_0",
+      "to_socket_identifier": "Socket_1",
       "to_socket_name": "Geometry"
     }
   ]
