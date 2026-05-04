@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "name": "ball",
+  "name": "fornitenodes",
   "type": "GeometryNodeTree",
   "interface": [
     {
@@ -45,7 +45,7 @@
       "inputs": [],
       "outputs": [
         {
-          "identifier": "Socket_1",
+          "identifier": "Socket_0",
           "name": "Geometry",
           "socket_type": "NodeSocketGeometry",
           "default_value": null,
@@ -83,7 +83,7 @@
       "type_specific": {},
       "inputs": [
         {
-          "identifier": "Socket_0",
+          "identifier": "Socket_1",
           "name": "Geometry",
           "socket_type": "NodeSocketGeometry",
           "default_value": null,
@@ -102,14 +102,14 @@
       "outputs": []
     },
     {
-      "name": "Set Shade Smooth",
+      "name": "Edge Paths to Selection",
       "label": "",
-      "bl_idname": "GeometryNodeSetShadeSmooth",
+      "bl_idname": "GeometryNodeEdgePathsToSelection",
       "location": [
-        -59.50843048095703,
-        12.51123046875
+        -55.22431564331055,
+        -46.10870361328125
       ],
-      "width": 140.0,
+      "width": 150.0,
       "hide": false,
       "mute": false,
       "use_custom_color": false,
@@ -122,36 +122,28 @@
       "type_specific": {},
       "inputs": [
         {
-          "identifier": "Geometry",
-          "name": "Geometry",
-          "socket_type": "NodeSocketGeometry",
-          "default_value": null,
-          "hide": false,
-          "hide_value": false
-        },
-        {
-          "identifier": "Selection",
-          "name": "Selection",
+          "identifier": "Start Vertices",
+          "name": "Start Vertices",
           "socket_type": "NodeSocketBool",
           "default_value": true,
           "hide": false,
           "hide_value": true
         },
         {
-          "identifier": "Shade Smooth",
-          "name": "Shade Smooth",
-          "socket_type": "NodeSocketBool",
-          "default_value": true,
+          "identifier": "Next Vertex Index",
+          "name": "Next Vertex Index",
+          "socket_type": "NodeSocketInt",
+          "default_value": -1,
           "hide": false,
-          "hide_value": false
+          "hide_value": true
         }
       ],
       "outputs": [
         {
-          "identifier": "Geometry",
-          "name": "Geometry",
-          "socket_type": "NodeSocketGeometry",
-          "default_value": null,
+          "identifier": "Selection",
+          "name": "Selection",
+          "socket_type": "NodeSocketBool",
+          "default_value": false,
           "hide": false,
           "hide_value": false
         }
@@ -160,22 +152,14 @@
   ],
   "links": [
     {
-      "from_node": "Set Shade Smooth",
-      "from_socket_identifier": "Geometry",
+      "from_node": "Group Input",
+      "from_socket_identifier": "Socket_0",
       "from_socket_name": "Geometry",
       "to_node": "Group Output",
-      "to_socket_identifier": "Socket_0",
-      "to_socket_name": "Geometry"
-    },
-    {
-      "from_node": "Group Input",
-      "from_socket_identifier": "Socket_1",
-      "from_socket_name": "Geometry",
-      "to_node": "Set Shade Smooth",
-      "to_socket_identifier": "Geometry",
+      "to_socket_identifier": "Socket_1",
       "to_socket_name": "Geometry"
     }
   ],
-  "is_modifier": false,
+  "is_modifier": true,
   "is_tool": false
 }

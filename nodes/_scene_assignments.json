@@ -7,6 +7,9 @@
   "modifier_links": {
     "Cube": {
       "GeometryNodes": "michealnodes"
+    },
+    "Cube.001": {
+      "GeometryNodes": "fornitenodes"
     }
   },
   "version": 1

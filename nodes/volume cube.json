@@ -319,5 +319,7 @@
       "to_socket_identifier": "Socket_0",
       "to_socket_name": "Geometry"
     }
-  ]
+  ],
+  "is_modifier": false,
+  "is_tool": false
 }
