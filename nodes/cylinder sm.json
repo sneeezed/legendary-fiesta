@@ -1,0 +1,283 @@
+{
+  "schema_version": "1.0",
+  "name": "cylinder sm",
+  "type": "GeometryNodeTree",
+  "interface": [
+    {
+      "name": "Geometry",
+      "socket_type": "NodeSocketGeometry",
+      "in_out": "OUTPUT",
+      "default_value": null,
+      "min_value": null,
+      "max_value": null,
+      "attribute_domain": "POINT"
+    },
+    {
+      "name": "Geometry",
+      "socket_type": "NodeSocketGeometry",
+      "in_out": "INPUT",
+      "default_value": null,
+      "min_value": null,
+      "max_value": null,
+      "attribute_domain": "POINT"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "Group Input",
+      "label": "",
+      "bl_idname": "NodeGroupInput",
+      "location": [
+        -340.0,
+        0.0
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [],
+      "outputs": [
+        {
+          "identifier": "Socket_0",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    },
+    {
+      "name": "Group Output",
+      "label": "",
+      "bl_idname": "NodeGroupOutput",
+      "location": [
+        200.0,
+        0.0
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Socket_1",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "__extend__",
+          "name": "",
+          "socket_type": "NodeSocketVirtual",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": []
+    },
+    {
+      "name": "Set Shade Smooth",
+      "label": "",
+      "bl_idname": "GeometryNodeSetShadeSmooth",
+      "location": [
+        20.000001907348633,
+        -4.767862796783447
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Geometry",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Selection",
+          "name": "Selection",
+          "socket_type": "NodeSocketBool",
+          "default_value": true,
+          "hide": false,
+          "hide_value": true
+        },
+        {
+          "identifier": "Shade Smooth",
+          "name": "Shade Smooth",
+          "socket_type": "NodeSocketBool",
+          "default_value": true,
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": [
+        {
+          "identifier": "Geometry",
+          "name": "Geometry",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    },
+    {
+      "name": "Instance on Points",
+      "label": "",
+      "bl_idname": "GeometryNodeInstanceOnPoints",
+      "location": [
+        -160.00001525878906,
+        53.98106384277344
+      ],
+      "width": 140.0,
+      "hide": false,
+      "mute": false,
+      "use_custom_color": false,
+      "color": [
+        0.6079999804496765,
+        0.6079999804496765,
+        0.6079999804496765
+      ],
+      "parent": null,
+      "type_specific": {},
+      "inputs": [
+        {
+          "identifier": "Points",
+          "name": "Points",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Selection",
+          "name": "Selection",
+          "socket_type": "NodeSocketBool",
+          "default_value": true,
+          "hide": false,
+          "hide_value": true
+        },
+        {
+          "identifier": "Instance",
+          "name": "Instance",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Pick Instance",
+          "name": "Pick Instance",
+          "socket_type": "NodeSocketBool",
+          "default_value": false,
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Instance Index",
+          "name": "Instance Index",
+          "socket_type": "NodeSocketInt",
+          "default_value": 0,
+          "hide": false,
+          "hide_value": true
+        },
+        {
+          "identifier": "Rotation",
+          "name": "Rotation",
+          "socket_type": "NodeSocketRotation",
+          "default_value": [
+            0.0,
+            0.0,
+            0.0
+          ],
+          "hide": false,
+          "hide_value": false
+        },
+        {
+          "identifier": "Scale",
+          "name": "Scale",
+          "socket_type": "NodeSocketVectorXYZ",
+          "default_value": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "hide": false,
+          "hide_value": false
+        }
+      ],
+      "outputs": [
+        {
+          "identifier": "Instances",
+          "name": "Instances",
+          "socket_type": "NodeSocketGeometry",
+          "default_value": null,
+          "hide": false,
+          "hide_value": false
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "from_node": "Set Shade Smooth",
+      "from_socket_identifier": "Geometry",
+      "from_socket_name": "Geometry",
+      "to_node": "Group Output",
+      "to_socket_identifier": "Socket_1",
+      "to_socket_name": "Geometry"
+    },
+    {
+      "from_node": "Instance on Points",
+      "from_socket_identifier": "Instances",
+      "from_socket_name": "Instances",
+      "to_node": "Set Shade Smooth",
+      "to_socket_identifier": "Geometry",
+      "to_socket_name": "Geometry"
+    },
+    {
+      "from_node": "Group Input",
+      "from_socket_identifier": "Socket_0",
+      "from_socket_name": "Geometry",
+      "to_node": "Instance on Points",
+      "to_socket_identifier": "Points",
+      "to_socket_name": "Points"
+    }
+  ]
+}

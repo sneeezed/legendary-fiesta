@@ -11,6 +11,9 @@
     "Cube": {
       "GeometryNodes": "Geometry Nodes"
     },
+    "Cylinder": {
+      "GeometryNodes": "cylinder sm"
+    },
     "Icosphere": {
       "GeometryNodes": "volume cube"
     },
