@@ -11,6 +11,9 @@
     "Cube": {
       "GeometryNodes": "Geometry Nodes"
     },
+    "Cube.001": {
+      "GeometryNodes": "subdiv"
+    },
     "Cylinder": {
       "GeometryNodes": "cylinder sm"
     },
@@ -19,9 +22,6 @@
     },
     "Sphere": {
       "GeometryNodes": "ball"
-    },
-    "Torus": {
-      "GeometryNodes": "torus"
     }
   },
   "version": 1
