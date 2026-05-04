@@ -19,6 +19,9 @@
     },
     "Sphere": {
       "GeometryNodes": "ball"
+    },
+    "Torus": {
+      "GeometryNodes": "torus"
     }
   },
   "version": 1
